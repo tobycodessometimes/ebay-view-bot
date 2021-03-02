@@ -1,29 +1,40 @@
 import requests
 import time
+import datetime
+
+timeopen = datetime.datetime.now()
 
 def view():
-    print (" --------------------------------------------")
-    print (" viewbot v.1.0.0")
-    print (" --------------------------------------------\n")
-    listingURL = input(" Link : ")
+    print (timeopen.strftime("%I:%M:%S │ Starting..."))
+    print ("""╔═╗┌┐ ┌─┐┬ ┬  ╦  ╦┬┌─┐┬ ┬╔╗ ┌─┐┌┬┐
+║╣ ├┴┐├─┤└┬┘  ╚╗╔╝│├┤ │││╠╩╗│ │ │ 
+╚═╝└─┘┴ ┴ ┴    ╚╝ ┴└─┘└┴┘╚═╝└─┘ ┴ """)
+    print ("━━━━━━━━━━━━━━━━━━━━━━")
+    print("Made by toby#7321 - <3")
+    print ("━━━━━━━━━━━━━━━━━━━━━━\n")
+    timelink = datetime.datetime.now()
+    listingURL = input((timelink.strftime("%I:%M:%S │ ")) + "Link -  ")
 
-    viewCount = int(input(" How many views? : "))
+    timeviews = datetime.datetime.now()
+    viewCount = int(input((timeviews.strftime("%I:%M:%S │ ")) + "Views Count -  "))
 
-    print (" Watching ... ")
-    print (" Do not close this window. ")
+    timewatching = datetime.datetime.now()
+    print ((timewatching.strftime("%I:%M:%S │ ")) + "Watching ...")
+    timeclose = datetime.datetime.now()
+    print ((timeclose.strftime("%I:%M:%S │ ")) + "Do not close this window.")
 
     start_time = time.time()
     for i in range(viewCount):
         r = requests.get(listingURL)
     
-    print (" Task completed! ")
+    timetaskc = datetime.datetime.now()
+    print ((timetaskc.strftime("%I:%M:%S │ ")) + "Task completed! ")
     viewTime = float(time.time() - start_time)
-    print(" Total time : " + " %s sec" % viewTime)
+    timetotaltime = datetime.datetime.now()
+    print((timetotaltime.strftime("%I:%M:%S │ ")) + "Total time : " + " %s Seconds" % viewTime)
     viewRate = float(viewCount / viewTime)
-    print (" View rate  : " +  " %s views/sec" % viewRate)
-
-    
-    # todo : iterate through other links in txt file, multithread, proxy support
+    timeviewrate = datetime.datetime.now()
+    print ((timeviewrate.strftime("%I:%M:%S │ ")) + "View rate  : " +  " %s Views / Second" % viewRate)
 
 
 if __name__ == '__main__':
