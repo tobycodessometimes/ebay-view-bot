@@ -10,7 +10,7 @@ def view():
 ║╣ ├┴┐├─┤└┬┘  ╚╗╔╝│├┤ │││╠╩╗│ │ │ 
 ╚═╝└─┘┴ ┴ ┴    ╚╝ ┴└─┘└┴┘╚═╝└─┘ ┴ """)
     print ("━━━━━━━━━━━━━━━━━━━━━━")
-    print("Made by toby#7321 - <3")
+    print("Made by @washedgram - Improved by @tobycodessometimes")
     print ("━━━━━━━━━━━━━━━━━━━━━━\n")
     timelink = datetime.datetime.now()
     listingURL = input((timelink.strftime("%I:%M:%S │ ")) + "Link -  ")
